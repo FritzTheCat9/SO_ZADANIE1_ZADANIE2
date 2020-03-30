@@ -1,3 +1,9 @@
+/*
+Politechnika Białostocka,
+Informatyka, PS2,
+Grupa: Bartłomiej Umiński, Dominik Borowski, Michał Wysocki
+*/
+
 // Kompilacja: gcc zadanie2.c -o zadanie2 -pthread
 // Wykonanie: ./zadanie2
 

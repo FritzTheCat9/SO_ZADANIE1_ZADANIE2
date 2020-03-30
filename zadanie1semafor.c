@@ -1,3 +1,9 @@
+/*
+Politechnika Białostocka,
+Informatyka, PS2,
+Grupa: Bartłomiej Umiński, Dominik Borowski, Michał Wysocki
+*/
+
 // Kompilacja: gcc zadanie1semafor.c -o zadanie1semafor -pthread
 // Wykonanie: ./zadanie1semafor
 
