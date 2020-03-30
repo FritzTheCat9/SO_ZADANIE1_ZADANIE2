@@ -1,2 +1,6 @@
+Politechnika Białostocka,
+Informatyka, PS2,
+Grupa: Bartłomiej Umiński, Dominik Borowski, Michał Wysocki
+
 Normalnie (bez opcji -O3) po kompilacji i uruchomieniu programu widać zmianę zmiennej golobalnej - licznik. To znaczy, że oba wątki mają do niej dostep (ten, który ją wypisuje i ten, który ją zwiększa). Po dodaniu opcji -O3 nie widać zmiany licznika (ciągle pokazuje 0). Można dojść do wniosku, że wykonuje się tylko wątek pierwszy (wypisujący) w nieskończoność. Prawdopodobnie dzieje się to przez nieskończone pętle w funkcjach wykonywanych przez wątki i to, że korzystają z tej samej zmiennej globalnej. Powoduje to powstanie problemu sekcji krytycznej. Chcemy, by w jednym momencie tylko jeden wątek  miał dostęp do zmiennej globalnej. Możemy to zrobic stosując semafor binarny np. mutexy w POSIX.
 Zaimplementowaliśmy to w pliku zadanie1semafor.c, mimo iż nie było konieczności musiałem upewnić się, że to działa i może być przyczyną złej pracy na zmiennej globalnej.
