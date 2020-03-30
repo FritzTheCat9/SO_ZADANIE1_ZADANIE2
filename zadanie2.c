@@ -13,7 +13,7 @@ struct funkcja_watek_struct
     long long liczba_iteracji;
 };
 
-// funkcja wykonywana w wątku1
+// funkcja wykonywana w wątkach
 void* funkcja_watek(void* arg)
 {
     struct funkcja_watek_struct* arg_struct = (struct funkcja_watek_struct*) arg;
@@ -41,7 +41,7 @@ int main()
     // tworzenie struktur na dane z wątków
     struct funkcja_watek_struct args[N];
 
-    // ID wątków - tablica
+    // tablica ID wątków
     pthread_t watek[N];
 
     // ustawienie ziarna do generowania liczb losowych
@@ -75,6 +75,7 @@ int main()
         , args[i].liczba_iteracji);
     }
 
+    // wypisane łącznej liczby iteracji we wszystkich wątkach
     printf("Laczna liczba iteracji: %lld\n", lacznie_iteracji);
 
     return 0;

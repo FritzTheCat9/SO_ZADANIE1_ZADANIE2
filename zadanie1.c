@@ -1,7 +1,7 @@
 // Kompilacja: gcc zadanie1.c -o zadanie1 -pthread
 // Wykonanie: ./zadanie1
 
-// Kompilacja: gcc zadanie1.c -O3 zadanie1 -pthread
+// Kompilacja: gcc zadanie1.c -o zadanie1 -pthread -O3
 // Wykonanie: ./zadanie1
 
 #include <stdio.h>
@@ -11,7 +11,7 @@
 // zmienna globalna - licznik
 long long licznik = 0;
 
-// funkcja wykonywana w wątku1
+// funkcja wykonywana w wątku1 - wypisuje wartość zmiennej globalnej licznik
 void* funkcja_watek1(void* arg)
 {
     while(1)
@@ -23,12 +23,12 @@ void* funkcja_watek1(void* arg)
     pthread_exit(0);
 }
 
-// funkcja wykonywana w wątku2
+// funkcja wykonywana w wątku2 - inkrementuje zmienną globalną licznik
 void* funkcja_watek2(void* arg)
 {
     while(1)
     {
-        printf("Watek2 - Inkrementacja licznika");
+        //printf("Watek2 - Inkrementacja licznika");
         licznik++;
     }
 
@@ -41,7 +41,7 @@ int main()
     // N - liczba wątków
     int N = 2;
 
-    // ID wątków - tablica
+    // tablica ID wątków
     pthread_t watek[N];
 
     // ustawienie domyślnych atrybutów wątków
