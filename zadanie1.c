@@ -1,3 +1,5 @@
+// zmiana
+
 /*
 Politechnika Białostocka,
 Informatyka, PS2,
